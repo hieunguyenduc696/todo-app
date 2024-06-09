@@ -6,13 +6,19 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const [NKL, setNKL] = useState(false);
+  const [flag, setFlag] = useState(false);
 
   useEffect(() => {
     if (!NKL) setNKL(true);
   }, [NKL]);
 
+  useEffect(() => {
+    if (!flag) setFlag(true);
+  }, [flag]);
+
   return (
     <>
+      {flag && "ADS"}
       {NKL && "ADS"}
       <div>
         <a href="https://vitejs.dev" target="_blank">
